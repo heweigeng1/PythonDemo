@@ -43,3 +43,35 @@ while len(nums)>0:
         nums3.append(num)
 
 print(nums2,nums3)
+
+while len(nums2)>0 or len(nums3)>0:
+    if len(nums2)>0:
+        nums.append(nums2.pop())
+    if len(nums3)>0:
+        nums.append(nums3.pop())
+else:
+    print("is end")
+
+print(nums)
+
+# break
+i=0
+while True:
+    if nums[i]>10:
+        print(nums[i])
+        i=i+1
+        break
+    
+print('执行了:',i,'次')
+
+# continue
+i=0
+_bool=True
+while _bool:
+    if len(nums)>i:
+        print(nums[i])
+        i=i+1
+        continue
+    else :
+        _bool=False
+print('执行了',i,'次')
